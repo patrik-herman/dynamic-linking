@@ -20,8 +20,8 @@ First, edit **yoursite.html:**
 	var def = {                                     //don't change the name of variable!
 	    website: "home.html",                       //your default yoursite.html content
 	    websiteHeadline: "Home",                    //If you want to change headline with loading another page, change this property
-	    websiteElement: ".my-web-content",          //this is just jQyery path to find element, where to paste web content
-	    headlineElement: ".my-headline",            //this is jQyery path to find headline element, where to paste def.websiteHeadline
+	    websiteElement: ".my-web-content",          //this is just jQuery path to find element, where to paste web content
+	    headlineElement: ".my-headline",            //this is jQuery path to find headline element, where to paste def.websiteHeadline
 	};
 	var webs_folders = {
 	    "home.html": "home.html",
