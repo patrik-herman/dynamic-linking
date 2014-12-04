@@ -4,11 +4,17 @@ var loc = window.location.href;
 
 
 
-var decode_url_by_hash = loc.split("#")[loc.split("#").length-1];
+var decode_url_by_hash = window.location.hash;
+
 
 if(decode_url_by_hash != loc){
 
-	def.website = webs_folders[decode_url_by_hash + ".html"];
+	decode_url_by_hash = decode_url_by_hash.split("/")[
+									window.location.hash.split("/").length-1
+									];
+
+	//def.website = webs_folders[decode_url_by_hash + ".html"];
+	def.website = webs_folders[decode_url_by_hash];
 	def.websiteHeadline = websites_headline_names[def.website];
 
 }
@@ -33,7 +39,8 @@ function link(source, headlineText, elem, headline, tf_check){
 
 			if(tf_check !== null && tf_check != false){
 
-				var hash_url = source.split(".")[source.split(".").length-2].split("/")[source.split(".")[source.split(".").length-2].split("/").length-1];
+				//var hash_url = source.split(".")[source.split(".").length-2].split("/")[source.split(".")[source.split(".").length-2].split("/").length-1];
+				var hash_url = source.slice(0, source.length-1);
 				window.location = "#" + hash_url;
 			}
 
