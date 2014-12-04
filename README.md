@@ -56,13 +56,13 @@ var websites_headline_names = {     //headline names, for example: link() got "h
 												<!-- Second, compact altervative -->
 ```
 	
-Now, edit **home.html** file:
+Now, edit **index.html** file in ./home/ folder:
 
 ```html
 <h3>Home!</h3>
 ```
 	
-And now, edit **about_us.html** file in ./folder/ folder:
+And now, edit **index.html** file in ./folder/about_us/ folder:
 
 ```html
 <font color="cornflowerblue">About us!</font>
