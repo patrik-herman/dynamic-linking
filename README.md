@@ -3,13 +3,13 @@ Dynamic linking
 
 > A small jQuery app with which you can dynamically load pages.
 
-### What it can do?
+#### What it can do?
 This little app can load website from another file and put it to your website.
 
-# Demo
+## Demo
 Working demo [here](http://rbg.wz.cz/dynamic-loading/yoursite.html)
 
-# Example:
+## Example:
 
 First, edit **yoursite.html:**
 
