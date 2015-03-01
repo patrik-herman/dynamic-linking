@@ -2,37 +2,43 @@
 // Now some properties
 
 var def = {                                     //don't change the name of variable!
-	website: "home/",                       	//your default yoursite.html content
-	websiteHeadline: "Home",                    //If you want to change headline with loading another page, change this property
-	websiteElement: ".my-web-content",          //this is just jQyery path to find element, where to paste web content
-	headlineElement: ".my-headline",            //this is jQuery path to find headline element, where to paste def.websiteHeadline
+    website: "home/",                           //your default yoursite.html content
+    websiteName: "home",                        //Name of the first loaded website, it's used in webs_folders
+    websiteElement: ".my-web-content",          //this is just jQyery path to find element, where to paste web content
+    headlineElement: ".my-headline",            //this is jQuery path to find headline element, where to paste def.websiteHeadline
 };
 var webs_folders = {
-	"home": "home/",
-	"about_us": "folder/about_us/",
+    "home": "home/",
+    "about_us": "folder/about_us/",
 }
-var websites_headline_names = {     //headline names, for example: link() got "home.html"...how it can to get headline name? Just very simply: websites_headline_names["xxx/"] :)
-	"home/": "Home",
-	"folder/about_us/": "About us", 
+var websites_headline_names = {     //headline names, for example: link() got "home.html"...how it can to get headline name? Just very simply: websites_headline_names["xxx.html"] :)
+    "home/": "Home",
+    "folder/about_us/": "About us", 
 };
 </script>
 
 
+<style>
+    a{
+        cursor: pointer;
+    }
+</style>
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:white;">
+        <h1>
+            Current site: <span class="my-headline"></span>
+        </h1>
+        <div class="my-web-content"></div>
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> <!-- add jQuery -->
+        <a onclick="
+            link('home',
+                '.my-web-content',
+                '.my-headline'
+            )">Home</a>                                 <!-- First alternative -->
+
+        |
+        
+        <a onclick="link('about_us', '.my-web-content', '.my-headline')">About us</a>
+                                                        <!-- Second, compact altervative -->
+</div>
+
 <script src="./js/d-linking.js"></script>
-
-<h1>
-	Current site: <span class="my-headline"></span>
-</h1>
-
-<div class="my-web-content"></div>
-	<a onclick="
-	link(webs_folders['home'],
-		'Home',
-		$('.my-web-content'),
-		$('.my-headline')
-	)">Home</a>                                 <!-- First alternative -->
-
-	<a onclick="link(webs_folders['about_us'], 'About us', $('.my-web-content'), $('.my-headline'))">About us</a>
-												<!-- Second, compact altervative -->
